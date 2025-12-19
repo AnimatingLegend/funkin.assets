@@ -56,10 +56,7 @@ class TankmanBattlefieldErectStage extends Stage
           rim.useAltMask = true;
         }
 
-        if (getGirlfriend().characterId == 'otis-speaker')
-        {
-          getNamedProp('tankBricks').setPosition(445, 774);
-        }
+        getNamedProp('tankBricks').setPosition(445, 774);
 
       case CharacterType.DAD:
         rim.angle = 25;
@@ -127,9 +124,6 @@ class TankmanBattlefieldErectStage extends Stage
       tankmanRim.useAltMask = false;
     }
 
-    if (getGirlfriend().characterId == 'otis-speaker')
-    {
-      getNamedProp('tankBricks').setPosition(445, 774);
-    }
+    getNamedProp('tankBricks').setPosition(445, 774);
   }
 }

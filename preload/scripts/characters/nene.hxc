@@ -1,4 +1,4 @@
-import funkin.play.character.MultiSparrowCharacter;
+import funkin.play.character.AnimateAtlasCharacter;
 import funkin.play.PlayState;
 import flixel.FlxG;
 import flixel.FlxSprite;
@@ -9,7 +9,7 @@ import funkin.modding.base.ScriptedFlxSprite;
 import funkin.modding.base.ScriptedFlxSpriteGroup;
 import funkin.audio.visualize.ABotVis;
 
-class NeneCharacter extends MultiSparrowCharacter
+class NeneCharacter extends AnimateAtlasCharacter
 {
   function new()
   {
@@ -323,8 +323,8 @@ class NeneCharacter extends MultiSparrowCharacter
     // refreshes just for the zIndex shit!
     if (!refershedLol)
     {
-      abot.x = this.x - 135;
-      abot.y = this.y + 210;
+      abot.x = this.x - 95 - (-this.globalOffsets[0] * this.scale.x);
+      abot.y = this.y + 384 - (-this.globalOffsets[1] * this.scale.y);
       abot.zIndex = this.zIndex - 10;
 
       PlayState.instance.currentStage.add(abot);
