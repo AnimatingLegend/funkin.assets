@@ -19,7 +19,7 @@ class TankmanBloodyCharacter extends MultiAnimateAtlasCharacter
     super.onCreate(event);
 
     // Precache the ending cutscene sound.
-    FunkinMemory.cacheSound(Paths.sound('erect/endCutscene'));
+    FunkinMemory.cacheSound(Paths.sound('erect/endCutscene', 'week7'));
   }
 
   var isBloody:Bool = false;
