@@ -194,7 +194,7 @@ class NenePixelCharacter extends SparrowCharacter
 
   function dance(forceRestart:Bool)
   {
-    if (abotSpeaker != null) abotSpeaker.animation.play("danceLeft", true);
+    if (abotSpeaker?.animation != null) abotSpeaker.animation.play("danceLeft", true);
     // Then, perform the appropriate animation for the current state.
     switch (currentState)
     {
@@ -202,12 +202,12 @@ class NenePixelCharacter extends SparrowCharacter
         if (hasDanced)
         {
           playAnimation('danceRight', true);
-          if (abot != null) abot.animation.play("danceRight", true);
+          if (abot?.animation != null) abot.animation.play("danceRight", true);
         }
         else
         {
           playAnimation('danceLeft', true);
-          if (abot != null) abot.animation.play("danceLeft", true);
+          if (abot?.animation != null) abot.animation.play("danceLeft", true);
         }
         hasDanced = !hasDanced;
       case STATE_PRE_RAISE:
