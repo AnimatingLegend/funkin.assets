@@ -31,13 +31,7 @@ class PhillyTrainErectStage extends Stage
     hasPlayedInGameCutscene = false;
   }
 
-  var lightColors:Array<FlxColor> = [
-    0xFFB66F43,
-    0xFF329A6D,
-    0xFF932C28,
-    0xFF2663AC,
-    0xFF502D64
-  ];
+  var lightColors:Array<FlxColor> = [0xFFB66F43, 0xFF329A6D, 0xFF932C28, 0xFF2663AC, 0xFF502D64];
 
   var lightWindow:FlxSprite;
   var lightShader:FlxRuntimeShader;
@@ -73,7 +67,9 @@ class PhillyTrainErectStage extends Stage
   {
     super.onCountdownStart(event);
 
-    if (!hasPlayedInGameCutscene && PlayState.instance.currentStage.getBoyfriend()?.characterId == 'pico-playable')
+    if (!hasPlayedInGameCutscene
+      && PlayState.instance.currentStage.getBoyfriend()?.characterId == 'pico-playable'
+      && !PlayState.instance.isChartingMode)
     {
       trace('Pausing countdown to play in game cutscene');
 
