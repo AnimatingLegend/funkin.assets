@@ -20,7 +20,7 @@ class DarnellCharacter extends AnimateAtlasCharacter
     // Precache the sounds used in 2hot.
     for (snd in ['Darnell_Lighter', 'Kick_Can_UP', 'Kick_Can_FORWARD'])
     {
-      FunkinMemory.cacheSound(Paths.sound(snd));
+      FunkinMemory.cacheSound(Paths.sound(snd, "weekend1"));
     }
   }
 
