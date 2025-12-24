@@ -585,7 +585,7 @@ class NeneTankmenCharacter extends AnimateAtlasCharacter
     }
   }
 
-  override function getAtlasSetting():AtlasSpriteSettings
+  override function getAtlasSettings():AtlasSpriteSettings
   {
     // Hide the heart symbol Nene has in her combo animation.
     // We manually add it as a separate sprite for nene-tankmen specifically
