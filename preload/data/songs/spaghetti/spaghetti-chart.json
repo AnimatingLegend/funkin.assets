@@ -673,6 +673,13 @@
       }
     },
     {
+      "t": 38206,
+      "e": "sserafimGuitarVibration",
+      "v": {
+        "duration": 0.55
+      }
+    },
+    {
       "t": 38206.260044843,
       "e": "ZoomCamera",
       "v": {
@@ -921,6 +928,13 @@
       }
     },
     {
+      "t": 46816,
+      "e": "sserafimGuitarVibration",
+      "v": {
+        "duration": 0.55
+      }
+    },
+    {
       "t": 46817.1210313902,
       "e": "ZoomCamera",
       "v": {
@@ -1166,6 +1180,13 @@
         "char": -1,
         "ease": "INSTANT",
         "easeDir": "Out"
+      }
+    },
+    {
+      "t": 55425,
+      "e": "sserafimGuitarVibration",
+      "v": {
+        "duration": 0.55
       }
     },
     {
@@ -1933,6 +1954,13 @@
         "enabled": true,
         "durations": [0.5],
         "intensities": [0.9]
+      }
+    },
+    {
+      "t": 81255,
+      "e": "sserafimGuitarVibration",
+      "v": {
+        "duration": 0.55
       }
     },
     {
@@ -3339,6 +3367,13 @@
       }
     },
     {
+      "t": 132915,
+      "e": "sserafimGuitarVibration",
+      "v": {
+        "duration": 0.55
+      }
+    },
+    {
       "t": 132915.260044843,
       "e": "ZoomCamera",
       "v": {
@@ -3570,6 +3605,13 @@
         "ease": "INSTANT",
         "char": -1,
         "easeDir": "Out"
+      }
+    },
+    {
+      "t": 141524,
+      "e": "sserafimGuitarVibration",
+      "v": {
+        "duration": 0.55
       }
     },
     {
@@ -3850,6 +3892,13 @@
         "ease": "INSTANT",
         "char": -1,
         "easeDir": "Out"
+      }
+    },
+    {
+      "t": 150134,
+      "e": "sserafimGuitarVibration",
+      "v": {
+        "duration": 0.55
       }
     },
     {

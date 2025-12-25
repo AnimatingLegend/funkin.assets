@@ -23,6 +23,8 @@ import funkin.audio.FunkinSound;
 import funkin.play.cutscene.CutsceneType;
 import funkin.play.PlayStatePlaylist;
 import funkin.play.stage.Stage;
+import funkin.util.HapticUtil;
+import funkin.util.Constants;
 
 class SserafimStage extends Stage
 {
@@ -197,6 +199,8 @@ class SserafimStage extends Stage
 
     switch (scriptEvent.eventData.eventKind)
     {
+      case 'sserafimGuitarVibration':
+        HapticUtil.increasingVibrate(Constants.MIN_VIBRATION_AMPLITUDE, Constants.MAX_VIBRATION_AMPLITUDE / 2, scriptEvent.eventData.getFloat('duration'));
       case 'sserafimShow':
         setGirlsVisible(scriptEvent.eventData.getBoolArray('visible'));
       case 'sserafimSing':
@@ -219,6 +223,8 @@ class SserafimStage extends Stage
           yunjin.playAnimation('kick2', true, false);
           FunkinSound.playOnce(Paths.sound('doorKick2'), 1.0);
           yunjin.danceEvery = 1;
+
+          HapticUtil.vibrate(0, 0.2, 0.8, 0);
 
           // Show the opponent health icon at this point
           PlayState.instance.iconP2.visible = true;
@@ -253,6 +259,8 @@ class SserafimStage extends Stage
           // play first kick anim
           yunjin.playAnimation('kick1', true, false);
           FunkinSound.playOnce(Paths.sound('doorKick1'), 1.0);
+
+          HapticUtil.vibrate(0, 0.2, 0.4, 0);
         }
       case 'sserafimEnd':
         endStuff();
@@ -406,6 +414,8 @@ class SserafimStage extends Stage
   {
     FlxTween.cancelTweensOf(getNamedProp('truckLight1'));
     FlxTween.cancelTweensOf(getNamedProp('truckLight2'));
+
+    HapticUtil.vibrate(0, duration / 2, amount / 2, 0);
 
     getNamedProp('truckLight1').alpha = amount;
     getNamedProp('truckLight2').alpha = amount;
@@ -662,6 +672,8 @@ class SserafimStage extends Stage
     FunkinSound.playOnce(Paths.sound('cutscene/end1'), 1.0);
 
     new FlxTimer().start(0.05, function(tmr) {
+      HapticUtil.vibrate(0, 0.2, 0.4, 0);
+
       SEEYOU1.visible = true;
       getNamedProp('solidCover').alpha = 1;
       PlayState.instance.camHUD.visible = false;
@@ -674,6 +686,8 @@ class SserafimStage extends Stage
       SEEYOU1.visible = false;
       SEEYOU2.visible = true;
       FunkinSound.playOnce(Paths.sound('cutscene/end2'), 1.0);
+
+      HapticUtil.vibrate(0, 0.4, 0.5, 0);
     });
 
     new FlxTimer().start(8, function(tmr) {
@@ -745,6 +759,8 @@ class SserafimStage extends Stage
 
     // gf taps herself
     new FlxTimer(cutsceneTimerManager).start(245 / 24, function(tmr) {
+      HapticUtil.vibrate(0, 0.1, 0.2, 0);
+
       setDarkenAmt(0.2, 0.01);
     });
     new FlxTimer(cutsceneTimerManager).start(251 / 24, function(tmr) {
@@ -753,6 +769,8 @@ class SserafimStage extends Stage
 
     // gf taps bf
     new FlxTimer(cutsceneTimerManager).start(406 / 24, function(tmr) {
+      HapticUtil.vibrate(0, 0.1, 0.2, 0);
+
       setDarkenAmt(0.2, 0.01);
     });
     new FlxTimer(cutsceneTimerManager).start(411 / 24, function(tmr) {
@@ -789,6 +807,7 @@ class SserafimStage extends Stage
           baseContrast: -30,
           baseSaturation: 0
         }, 49 / 24, {ease: FlxEase.sineOut});
+      HapticUtil.vibrate(10 / 24, 50 / 24, 0.1, 0.1);
     });
 
     // truck gets really close
@@ -810,6 +829,7 @@ class SserafimStage extends Stage
           baseContrast: -17,
           baseSaturation: 0
         }, 15 / 24, {ease: FlxEase.expoIn});
+      HapticUtil.vibrate(2 / 24, 20 / 24, 0.4, 0.4);
     });
 
     var offsetLol:Float = 562;
@@ -825,6 +845,10 @@ class SserafimStage extends Stage
       getNamedProp('solidCover').alpha = 1;
 
       setCutsceneVisibility(false);
+
+      new FlxTimer().start(5 / 24, function(tmr) {
+        HapticUtil.vibrate(0, 10 / 24, 1, 1);
+      });
     });
 
     // fade out from black and add dust
