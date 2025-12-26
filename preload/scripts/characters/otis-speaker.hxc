@@ -105,7 +105,10 @@ class OtisSpeakerCharacter extends AnimateAtlasCharacter
       updateMuzzle();
     });
 
-    initTimemap();
+    if (!this.debug)
+    {
+      initTimemap();
+    }
   }
 
   function updateMuzzle():Void
