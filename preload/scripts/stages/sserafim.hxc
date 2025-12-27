@@ -721,9 +721,6 @@ class SserafimStage extends Stage
 
   function introCutscene()
   {
-    new FlxTimer().start(0.1, function(tmr) {
-      PlayState.instance.togglePauseButton(); // I dont know why but toggling it without a delay just doesnt work??
-    });
     PlayState.instance.isInCutscene = true;
     PlayState.instance.mayPauseGame = false;
 
