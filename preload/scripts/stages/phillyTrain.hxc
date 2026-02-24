@@ -153,7 +153,8 @@ class PhillyTrainStage extends Stage
 
   function trainReset():Void
   {
-    getGirlfriend().playAnimation('hairFall');
+    if (startedMoving) getGirlfriend().playAnimation('hairFall');
+
     getNamedProp('train').x = FlxG.width + 200;
 
     trainMoving = false;
@@ -169,6 +170,12 @@ class PhillyTrainStage extends Stage
   {
     super.onSongRetry(event);
     trainReset();
+
+    // Force reset gf to her idle animation to prevent glitching.
+    if (getGirlfriend() != null) getGirlfriend().dance(true);
+
+    // Stop train audio to prevent audio overlap.
+    if (trainSound != null) trainSound.stop();
   }
 
   function kill()

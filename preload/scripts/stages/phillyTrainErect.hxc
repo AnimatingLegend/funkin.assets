@@ -525,6 +525,9 @@ class PhillyTrainErectStage extends Stage
 
   function trainReset():Void
   {
+
+    if (startedMoving) getGirlfriend().playAnimation('hairFall');
+
     getNamedProp('train').x = FlxG.width + 200;
 
     switch (getGirlfriend().characterId)
@@ -545,6 +548,12 @@ class PhillyTrainErectStage extends Stage
   {
     super.onSongRetry(event);
     trainReset();
+
+    // Force reset gf to her idle animation to prevent glitching.
+    if (getGirlfriend() != null) getGirlfriend().dance(true);
+
+    // Stop train audio to prevent audio overlap.
+    if (trainSound != null) trainSound.stop();
   }
 
   public override function onSongEnd(event:CountdownScriptEvent):Void
