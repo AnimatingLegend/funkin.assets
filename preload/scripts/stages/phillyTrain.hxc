@@ -172,7 +172,11 @@ class PhillyTrainStage extends Stage
     trainReset();
 
     // Force reset gf to her idle animation to prevent glitching.
-    if (getGirlfriend() != null) getGirlfriend().dance(true);
+    if (getGirlfriend() != null)
+    {
+      getGirlfriend().dance(true);
+      getGirlfriend().animation.finish();
+    }
 
     // Stop train audio to prevent audio overlap.
     if (trainSound != null) trainSound.stop();
