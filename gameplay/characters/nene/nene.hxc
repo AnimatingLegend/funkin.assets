@@ -459,7 +459,6 @@ class NeneBaseCharacter extends AnimateAtlasCharacter
     currentStage.add(stereoBG);
 
     currentStage.refresh();
-    hasSetupAbot = true;
   }
 
   var currentShader:FlxRuntimeShader = null;
