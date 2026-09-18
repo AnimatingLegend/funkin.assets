@@ -9,7 +9,7 @@ import funkin.play.character.CharacterType;
 
 class MainStageErectStage extends Stage
 {
-  function new()
+  public function new()
   {
     super('mainStageErect');
   }

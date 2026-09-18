@@ -50,7 +50,7 @@ class OtisSpeakerCharacter extends AnimateAtlasCharacter
     return results;
   }
 
-  function new()
+  public function new()
   {
     super('otis-speaker');
 

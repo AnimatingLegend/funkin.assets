@@ -5,7 +5,7 @@ import funkin.util.HapticUtil;
 
 class BFHoldingGFCharacter extends MultiSparrowCharacter
 {
-  function new()
+  public function new()
   {
     super('bf-holding-gf');
   }

@@ -3,7 +3,7 @@ import funkin.save.Save;
 
 class CocoaSong extends Song
 {
-  function new()
+  public function new()
   {
     super('cocoa');
   }

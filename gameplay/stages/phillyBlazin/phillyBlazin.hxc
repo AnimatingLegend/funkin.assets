@@ -21,7 +21,7 @@ import funkin.ui.debug.cameraeditor.CameraEditorState;
  */
 class PhillyBlazinStage extends Stage
 {
-  function new()
+  public function new()
   {
     super('phillyBlazin');
   }

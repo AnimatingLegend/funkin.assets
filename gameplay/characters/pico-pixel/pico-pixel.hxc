@@ -14,7 +14,7 @@ import funkin.assets.Paths as NewPaths;
 
 class PicoPixelCharacter extends SparrowCharacter
 {
-  function new()
+  public function new()
   {
     super('pico-pixel');
   }

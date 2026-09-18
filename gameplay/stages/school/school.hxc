@@ -3,7 +3,7 @@ import funkin.play.stage.Stage;
 
 class SchoolStage extends Stage
 {
-  function new()
+  public function new()
   {
     super('school');
   }

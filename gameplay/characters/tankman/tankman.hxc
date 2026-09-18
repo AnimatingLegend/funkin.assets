@@ -4,7 +4,7 @@ import funkin.play.PlayState;
 
 class TankmanCharacter extends MultiAnimateAtlasCharacter
 {
-  function new()
+  public function new()
   {
     super('tankman');
   }

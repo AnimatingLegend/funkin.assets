@@ -41,7 +41,7 @@ class SserafimChaewonCharacter extends AnimateAtlasCharacter
     }
   ];
 
-  function new()
+  public function new()
   {
     super('sserafim-chaewon');
   }

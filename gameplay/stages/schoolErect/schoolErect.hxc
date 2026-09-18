@@ -5,7 +5,7 @@ import funkin.graphics.shaders.DropShadowShader;
 
 class SchoolErectStage extends Stage
 {
-  function new()
+  public function new()
   {
     super('schoolErect');
   }

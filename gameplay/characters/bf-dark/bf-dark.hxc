@@ -6,7 +6,7 @@ import funkin.util.HapticUtil;
 
 class BoyfriendDarkCharacter extends MultiAnimateAtlasCharacter
 {
-  function new()
+  public function new()
   {
     super('bf-dark');
   }

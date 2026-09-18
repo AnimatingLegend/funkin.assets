@@ -8,7 +8,7 @@ import funkin.play.PlayState;
 
 class SpookyDarkCharacter extends SparrowCharacter
 {
-  function new()
+  public function new()
   {
     super('spooky-dark');
 

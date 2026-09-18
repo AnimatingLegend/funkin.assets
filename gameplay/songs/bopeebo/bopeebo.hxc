@@ -3,7 +3,7 @@ import funkin.save.Save;
 
 class BopeeboSong extends Song
 {
-  function new()
+  public function new()
   {
     super('bopeebo');
   }

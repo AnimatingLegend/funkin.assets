@@ -41,7 +41,7 @@ class SserafimYunjinCharacter extends AnimateAtlasCharacter
     }
   ];
 
-  function new()
+  public function new()
   {
     super('sserafim-yunjin');
   }

@@ -27,7 +27,7 @@ class EggnogErectSong extends Song
   var debugTesting:Bool = false;
   var isMobilePauseButtonPressed:Bool = false;
 
-  function new()
+  public function new()
   {
     super('eggnog', {
       variation: 'erect'

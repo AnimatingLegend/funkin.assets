@@ -41,7 +41,7 @@ class SserafimEunchaeCharacter extends AnimateAtlasCharacter
     }
   ];
 
-  function new()
+  public function new()
   {
     super('sserafim-eunchae');
   }

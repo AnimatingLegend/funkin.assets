@@ -8,7 +8,7 @@ import flixel.graphics.FlxGraphic;
 
 class TankmanBattlefieldErectStage extends Stage
 {
-  function new()
+  public function new()
   {
     super('tankmanBattlefieldErect');
   }

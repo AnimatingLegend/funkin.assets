@@ -60,7 +60,7 @@ class SserafimStage extends Stage
   // Tracked FunkinTweens so we can cancel them on event reset without relying on FlxTween.cancelTweensOf.
   var _activeFunkinTweens:Array<FunkinVarTween> = [];
 
-  function new()
+  public function new()
   {
     super('sserafim');
 

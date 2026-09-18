@@ -6,7 +6,7 @@ import funkin.util.HapticUtil;
 
 class BoyfriendChristmasCharacter extends MultiSparrowCharacter
 {
-  function new()
+  public function new()
   {
     super('bf-christmas');
   }

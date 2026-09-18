@@ -9,7 +9,7 @@ import funkin.Conductor;
 
 class TankmanBattlefieldStage extends Stage
 {
-  function new()
+  public function new()
   {
     super('tankmanBattlefield');
   }

@@ -8,7 +8,7 @@ import funkin.play.PlayState;
 
 class GirlfriendDarkCharacter extends AnimateAtlasCharacter
 {
-  function new()
+  public function new()
   {
     super('gf-dark');
   }

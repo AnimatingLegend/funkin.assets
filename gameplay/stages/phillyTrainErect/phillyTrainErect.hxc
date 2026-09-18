@@ -21,7 +21,7 @@ import funkin.ui.FullScreenScaleMode;
 
 class PhillyTrainErectStage extends Stage
 {
-  function new()
+  public function new()
   {
     super('phillyTrainErect');
     hasPlayedInGameCutscene = false;

@@ -57,7 +57,7 @@ class SserafimSakuraCharacter extends MultiAnimateAtlasCharacter
     }
   ];
 
-  function new()
+  public function new()
   {
     super('sserafim-sakura');
   }

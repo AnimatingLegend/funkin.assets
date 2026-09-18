@@ -14,7 +14,7 @@ import flixel.tweens.FlxTween;
 
 class PicoHoldingNeneCharacter extends MultiAnimateAtlasCharacter
 {
-  function new()
+  public function new()
   {
     super('pico-holding-nene');
   }

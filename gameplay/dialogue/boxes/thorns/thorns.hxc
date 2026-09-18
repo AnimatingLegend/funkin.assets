@@ -5,7 +5,7 @@ import funkin.play.cutscene.dialogue.DialogueBox;
 
 class ThornsDialogueBox extends DialogueBox
 {
-  function new()
+  public function new()
   {
     super('thorns');
   }

@@ -42,7 +42,7 @@ class PhillyStreetsErectStage extends Stage
   var scrollingSky:FunkinTiledSprite;
   var colorShader:AdjustColorShader;
 
-  function new()
+  public function new()
   {
     super('phillyStreetsErect');
   }

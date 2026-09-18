@@ -9,7 +9,7 @@ import funkin.graphics.shaders.DropShadowShader;
 
 class NenePixelCharacter extends SparrowCharacter
 {
-  function new()
+  public function new()
   {
     super('nene-pixel');
   }

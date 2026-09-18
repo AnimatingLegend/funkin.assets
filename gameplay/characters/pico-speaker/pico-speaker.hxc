@@ -16,7 +16,7 @@ class PicoSpeakerCharacter extends AnimateAtlasCharacter
   var shootTimes:Array<Float> = [];
   var shootDirs:Array<Int> = [];
 
-  function new()
+  public function new()
   {
     super('pico-speaker');
 

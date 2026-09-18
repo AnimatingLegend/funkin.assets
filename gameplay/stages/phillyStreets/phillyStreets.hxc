@@ -38,7 +38,7 @@ class PhillyStreetsStage extends Stage
   var carsEnabled:Bool = true;
   var scrollingSky:FunkinTiledSprite;
 
-  function new()
+  public function new()
   {
     super('phillyStreets');
   }

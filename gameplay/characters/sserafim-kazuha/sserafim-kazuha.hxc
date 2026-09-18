@@ -41,7 +41,7 @@ class SserafimKazuhaCharacter extends AnimateAtlasCharacter
     }
   ];
 
-  function new()
+  public function new()
   {
     super('sserafim-kazuha');
   }

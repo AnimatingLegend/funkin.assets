@@ -18,7 +18,7 @@ class TankmanSprite extends FunkinSprite
   // the side the tankman is running from
   public var goingRight:Bool = false;
 
-  function new()
+  public function new()
   {
     super();
 
