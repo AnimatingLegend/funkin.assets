@@ -355,7 +355,7 @@ class NeneBaseCharacter extends AnimateAtlasCharacter
   function moveByNoteKind(kind:String):Void
   {
     // Force ABot to look where the action is happening.
-    switch (event.note.kind)
+    switch (kind)
     {
       case "weekend-1-lightcan":
         movePupilsLeft();
