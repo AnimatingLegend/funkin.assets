@@ -409,7 +409,7 @@ class TwoHOTSong extends Song
 
   function spawnImpactParticle():Void
   {
-    var impactParticle:FunkinSprite = FunkinSprite.createSparrow(0, 0, 'gameplay/songs/2hot/graphics/can-impact');
+    var impactParticle:FunkinSprite = new FunkinSprite().loadSparrow('gameplay/songs/2hot/graphics/can-impact');
     impactParticle.animation.addByPrefix('idle', 'CanImpactParticle0', 24, false);
     impactParticle.animation.play('idle');
     impactParticle.x = PlayState.instance.currentStage.getBoyfriend().x + 400;

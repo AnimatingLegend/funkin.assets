@@ -121,7 +121,7 @@ class PicoPlayerBaseCharacter extends MultiAnimateAtlasCharacter
       deathSpriteNene.revive();
     }
 
-    deathSpriteNene = FunkinSprite.createSparrow(0, 0, 'gameplay/characters/nene/nene-knifetoss');
+    deathSpriteNene = new FunkinSprite().loadSparrow('gameplay/characters/nene/nene-knifetoss');
     deathSpriteNene.x = gf.originalPosition.x + 120;
     deathSpriteNene.y = gf.originalPosition.y;
     deathSpriteNene.zIndex = this.zIndex - 5;

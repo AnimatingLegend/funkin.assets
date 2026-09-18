@@ -81,11 +81,11 @@ class OtisSpeakerCharacter extends AnimateAtlasCharacter
     vizAdjustColor.contrast = 0;
     vizAdjustColor.saturation = -10;
 
-    stereoBG = new FunkinSprite(0, 0, Paths.image('gameplay/characters/nene/stereo-bg'));
+    stereoBG = new FunkinSprite().loadTexture('gameplay/characters/nene/stereo-bg');
 
     eyeWhites = new FunkinSprite().makeSolidColor(160, 60);
 
-    pupil = FunkinSprite.createTextureAtlas(0, 0, "gameplay/characters/nene/abot-eyes");
+    pupil = new FunkinSprite().loadTextureAtlas("gameplay/characters/nene/abot-eyes");
     pupil.x = this.x;
     pupil.y = this.y;
     pupil.zIndex = this.zIndex - 5;

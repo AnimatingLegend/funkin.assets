@@ -171,7 +171,7 @@ class DarnellSong extends Song
 
     cutsceneConductor.onBeatHit.add(onCutsceneBeatHit);
 
-    var cutsceneCan:FunkinSprite = FunkinSprite.createSparrow(darnellPos[0], darnellPos[1], 'gameplay/songs/darnell/cutscene/cutscene-can');
+    var cutsceneCan:FunkinSprite = new FunkinSprite(darnellPos[0], darnellPos[1]).loadSparrow('gameplay/songs/darnell/cutscene/cutscene-can');
     cutsceneCan.animation.addByPrefix('forward', "can kick quick0", 24, false);
     cutsceneCan.animation.addByPrefix('up', "can kicked up0", 24, false);
     PlayState.instance.currentStage.add(cutsceneCan);

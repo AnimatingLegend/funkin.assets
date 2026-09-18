@@ -49,7 +49,7 @@ class PicoPixelCharacter extends SparrowCharacter
       deathSpriteNene.revive();
     }
 
-    deathSpriteNene = FunkinSprite.createSparrow(0, 0, 'gameplay/characters/nene-pixel/nene-pixel-knifetoss');
+    deathSpriteNene = new FunkinSprite().loadSparrow('gameplay/characters/nene-pixel/nene-pixel-knifetoss');
     deathSpriteNene.x = gf.originalPosition.x + 280 - (-gf.globalOffsets[0] * 6);
     deathSpriteNene.y = gf.originalPosition.y + 170 - (-gf.globalOffsets[1] * 6);
     deathSpriteNene.animation.addByPrefix('throw', 'knifetosscolor0', 24, false);

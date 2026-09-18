@@ -52,13 +52,13 @@ class NenePixelCharacter extends SparrowCharacter
 
     // Reposition sprites in onUpdate!
 
-    abotHead = FunkinSprite.createSparrow(0, 0, 'gameplay/characters/nene-pixel/abot-pixel/abot-pixel-head');
+    abotHead = new FunkinSprite().loadSparrow('gameplay/characters/nene-pixel/abot-pixel/abot-pixel-head');
     abotHead.scale.set(6, 6);
     abotHead.antialiasing = false;
     abotHead.animation.addByPrefix('toleft', 'toleft0', 24, false);
     abotHead.animation.addByPrefix('toright', 'toright0', 24, false);
 
-    abot = FunkinSprite.createSparrow(0, 0, 'gameplay/characters/nene-pixel/abot-pixel/abot-pixel-body');
+    abot = new FunkinSprite().loadSparrow('gameplay/characters/nene-pixel/abot-pixel/abot-pixel-body');
     abot.scale.set(6, 6);
     abot.origin.x = Math.round(abot.origin.x);
     abot.origin.y = Math.round(abot.origin.y);
@@ -69,7 +69,7 @@ class NenePixelCharacter extends SparrowCharacter
     abot.animation.addByPrefix('danceRight', 'danceRight', 24, false);
     abot.animation.addByPrefix('lowerKnife', 'return', 24, false);
 
-    abotSpeaker = FunkinSprite.createSparrow(0, 0, 'gameplay/characters/nene-pixel/abot-pixel/abot-pixel-speaker');
+    abotSpeaker = new FunkinSprite().loadSparrow('gameplay/characters/nene-pixel/abot-pixel/abot-pixel-speaker');
     abotSpeaker.scale.set(6, 6);
     abotSpeaker.origin.x = Math.round(abotSpeaker.origin.x);
     abotSpeaker.origin.y = Math.round(abotSpeaker.origin.y);
@@ -79,7 +79,7 @@ class NenePixelCharacter extends SparrowCharacter
     // danceLeft and danceRight are identical for the speakers, we can just use 1 of em
     abotSpeaker.animation.addByPrefix('danceLeft', 'danceLeft', 24, false);
 
-    abotBack = FunkinSprite.create(0, 0, 'gameplay/characters/nene-pixel/abot-pixel/abot-pixel-back');
+    abotBack = new FunkinSprite().loadTexture('gameplay/characters/nene-pixel/abot-pixel/abot-pixel-back');
     abotBack.scale.set(6.1, 6);
     abotBack.antialiasing = false;
     abotBack.x = this.x;

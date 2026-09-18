@@ -40,7 +40,7 @@ class NeneTankmenCharacter extends NeneBaseCharacter
       spr.shader = vizAdjustColor;
     }
 
-    comboHeart = FunkinSprite.createSparrow(0, 0, "gameplay/characters/nene-tankmen/nene-combo-heart");
+    comboHeart = new FunkinSprite().loadSparrow("gameplay/characters/nene-tankmen/nene-combo-heart");
     comboHeart.animation.addByPrefix("idle", "hearts aflutter", 24, false);
     comboHeart.shader = adjustColor;
     comboHeart.zIndex = this.zIndex + 1;

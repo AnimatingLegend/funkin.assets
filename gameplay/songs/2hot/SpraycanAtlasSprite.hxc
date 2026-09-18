@@ -64,7 +64,7 @@ class SpraycanAtlasSprite extends FunkinSprite
   {
     if (frameNumber == 3 && name == 'can-shot')
     {
-      var explode:FunkinSprite = FunkinSprite.createSparrow(this.x + 150, this.y - 250, 'gameplay/songs/2hot/graphics/spraycan-explosion');
+      var explode:FunkinSprite = new FunkinSprite(this.x + 150, this.y - 250).loadSparrow('gameplay/songs/2hot/graphics/spraycan-explosion');
       explode.animation.addByPrefix('idle', 'Explosion 1 movie0', 24, false);
       PlayState.instance.currentStage.add(explode);
 
@@ -78,7 +78,7 @@ class SpraycanAtlasSprite extends FunkinSprite
 
   function playHitExplosion():Void
   {
-    var explodeEZ:FunkinSprite = FunkinSprite.createSparrow(this.x + 750, this.y - 100, 'gameplay/songs/2hot/graphics/spraycan-explosion-ez');
+    var explodeEZ:FunkinSprite = new FunkinSprite(this.x + 750, this.y - 100).loadSparrow('gameplay/songs/2hot/graphics/spraycan-explosion-ez');
     explodeEZ.animation.addByPrefix('idle', 'explosion round 1 short0', 24, false);
     explodeEZ.animation.play('idle');
 
