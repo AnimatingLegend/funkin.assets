@@ -27,6 +27,7 @@ class PhillyTrainErectStage extends Stage
     hasPlayedInGameCutscene = false;
   }
 
+  var curLight:Int;
   var lightColors:Array<FlxColor> = [
     0xFFB66F43,
     0xFF329A6D,
