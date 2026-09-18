@@ -27,9 +27,8 @@ class PhillyBlazinStage extends Stage
   }
 
   var rainShader:RuntimeRainShader = new RuntimeRainShader();
+  var rainShaderFilter:ShaderFilter;
   var scrollingSky:FlxTiledSprite;
-
-  // var rainShaderFilter:ShaderFilter;
 
   function queryAssets(type:AssetType):Array<AssetPath>
   {
