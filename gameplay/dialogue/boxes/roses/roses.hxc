@@ -34,6 +34,7 @@ class RosesDialogueBox extends DialogueBox
   override function onDialogueLine(event:DialogueScriptEvent):Void
   {
     // Override the default box animation behavior by switching the state
+    @:privateAccess
     event.conversation.state = ConversationState.Opening;
 
     FunkinSound.playOnce(Paths.sound('gameplay/dialogue/boxes/roses/click-advance'), 0.6);

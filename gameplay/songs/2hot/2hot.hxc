@@ -133,6 +133,7 @@ class TwoHOTSong extends Song
     VideoCutscene.hideVideo();
 
     // This ensures Nene plays 'danceLeft' so that she syncs correctly with the cutscene video
+    @:privateAccess
     PlayState.instance.currentStage.getGirlfriend().hasDanced = false;
     PlayState.instance.currentStage.getGirlfriend().dance(true);
 

@@ -121,6 +121,7 @@ class PhillyTrainErectStage extends Stage
     PlayState.instance.isInCutscene = true;
     PlayState.instance.mayPauseGame = false;
 
+    @:privateAccess
     skipText = new FlxText(
       936 * FullScreenScaleMode.wideScale.x,
       618 * FullScreenScaleMode.wideScale.y,
@@ -449,6 +450,7 @@ class PhillyTrainErectStage extends Stage
     isMobilePauseButtonPressed = TouchUtil.overlapsComplex(PlayState.instance.pauseButton) && TouchUtil.justPressed;
     #end
 
+    @:privateAccess
     if ((PlayState.instance.controls.CUTSCENE_ADVANCE || isMobilePauseButtonPressed) && !cutsceneSkipped)
     {
       if (!canSkipCutscene)
@@ -469,6 +471,7 @@ class PhillyTrainErectStage extends Stage
         }
       }
     }
+    @:privateAccess
     if ((PlayState.instance.controls.CUTSCENE_ADVANCE || isMobilePauseButtonPressed) && !cutsceneSkipped && canSkipCutscene)
     {
       skipCutscene();

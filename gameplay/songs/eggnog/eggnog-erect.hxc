@@ -73,6 +73,7 @@ class EggnogErectSong extends Song
 
   function startCutscene()
   {
+    @:privateAccess
     skipText = new FlxText(
       936 * FullScreenScaleMode.wideScale.x,
       618 * FullScreenScaleMode.wideScale.y,
@@ -191,6 +192,7 @@ class EggnogErectSong extends Song
 
     if (PlayState.instance.isInCutscene)
     {
+      @:privateAccess
       if ((PlayState.instance.controls.CUTSCENE_ADVANCE || isMobilePauseButtonPressed) && !cutsceneSkipped)
       {
         if (!canSkipCutscene)
@@ -210,6 +212,7 @@ class EggnogErectSong extends Song
       }
     }
 
+    @:privateAccess
     if ((PlayState.instance.controls.CUTSCENE_ADVANCE || isMobilePauseButtonPressed) && canSkipCutscene && !cutsceneSkipped)
     {
       PlayState.instance.camCutscene.fade(0xFF000000, 0.5, false, null, true);

@@ -33,6 +33,7 @@ class ThornsDialogueBox extends DialogueBox
   override function onDialogueLine(event:DialogueScriptEvent):Void
   {
     // Override the default box animation behavior by switching the state
+    @:privateAccess
     event.conversation.state = ConversationState.Opening;
 
     super.onDialogueLine(event);
