@@ -31,7 +31,7 @@ class SserafimGirlfriendCharacter extends AnimateAtlasCharacter
     }
   }
 
-  public override function onSongEvent(scriptEvent:SongEventScriptEvent)
+  override function onSongEvent(scriptEvent:SongEventScriptEvent)
   {
     super.onSongEvent(scriptEvent);
 

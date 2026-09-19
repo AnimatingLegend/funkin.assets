@@ -9,7 +9,7 @@ class ParentsChristmasCharacter extends AnimateAtlasCharacter
     super('parents-christmas');
   }
 
-  function onNoteHit(event:HitNoteScriptEvent)
+  override function onNoteHit(event:HitNoteScriptEvent)
   {
     // Override the hit note animation.
     switch (event.note.kind)

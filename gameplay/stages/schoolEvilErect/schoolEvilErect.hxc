@@ -50,7 +50,7 @@ class SchoolEvilErectStage extends Stage
     }
   }
 
-  function kill()
+  override function kill()
   {
     super.kill();
     wiggleBack = null;

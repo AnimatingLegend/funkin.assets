@@ -8,7 +8,7 @@ class SchoolStage extends Stage
     super('school');
   }
 
-  function buildStage()
+  override function buildStage()
   {
     super.buildStage();
 

@@ -23,7 +23,7 @@ class WinterHorrorlandSong extends Song
     hasPlayedCutscene = false;
   }
 
-  override public function onCountdownStart(event:CountdownScriptEvent):Void
+  override function onCountdownStart(event:CountdownScriptEvent):Void
   {
     super.onCountdownStart(event);
 
@@ -37,7 +37,7 @@ class WinterHorrorlandSong extends Song
     }
   }
 
-  override public function onCreate(event:ScriptEvent):Void
+  override function onCreate(event:ScriptEvent):Void
   {
     super.onCreate(event);
 
@@ -47,7 +47,7 @@ class WinterHorrorlandSong extends Song
   /**
    * Plays the cutscene that appears at the start of Winter Horrorland.
    */
-  public function playHorrorStartCutscene():Void
+  function playHorrorStartCutscene():Void
   {
     PlayState.instance.isInCutscene = true;
     PlayState.instance.camHUD.visible = false;

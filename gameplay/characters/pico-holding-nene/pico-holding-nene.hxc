@@ -77,7 +77,7 @@ class PicoHoldingNeneCharacter extends MultiAnimateAtlasCharacter
     }
   }
 
-  function getDeathQuote():Null<String>
+  override function getDeathQuote():Null<String>
   {
     var randomCensor:Array<Int> = [];
 

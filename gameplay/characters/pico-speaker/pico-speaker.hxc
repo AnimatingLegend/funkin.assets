@@ -43,7 +43,7 @@ class PicoSpeakerCharacter extends AnimateAtlasCharacter
     super.dance(force);
   }
 
-  function reset():Void
+  override function reset():Void
   {
     if (this.debug) return;
 

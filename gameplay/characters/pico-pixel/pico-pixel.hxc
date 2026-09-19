@@ -19,7 +19,7 @@ class PicoPixelCharacter extends SparrowCharacter
     super('pico-pixel');
   }
 
-  override public function queryAssets(type:AssetType):Array<AssetPath>
+  function queryAssets(type:AssetType):Array<AssetPath>
   {
     var results:Array<AssetPath> = super.queryAssets(type);
 
@@ -61,7 +61,7 @@ class PicoPixelCharacter extends SparrowCharacter
     });
   }
 
-  override public function onCreate(event:ScriptEvent):Void
+  override function onCreate(event:ScriptEvent):Void
   {
     super.onCreate(event);
 
@@ -74,7 +74,7 @@ class PicoPixelCharacter extends SparrowCharacter
     NewAssets.cacheFlxGraphic(NewPaths.image('gameplay/characters/nene-pixel/nene-pixel-knifetoss'));
   }
 
-  override public function playAnimation(name:String, restart:Bool = false, ignoreOther:Bool = false, reversed:Bool = false):Void
+  override function playAnimation(name:String, restart:Bool = false, ignoreOther:Bool = false, reversed:Bool = false):Void
   {
     if (name == 'firstDeath')
     {

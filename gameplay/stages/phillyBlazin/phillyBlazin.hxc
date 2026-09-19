@@ -160,7 +160,7 @@ class PhillyBlazinStage extends Stage
     }
   }
 
-  public function onNoteHit(event:HitNoteScriptEvent)
+  override function onNoteHit(event:HitNoteScriptEvent)
   {
     super.onNoteHit(event);
     rainTimeScale += 0.7;
@@ -234,7 +234,7 @@ class PhillyBlazinStage extends Stage
   var postShockCounter:Int = 0;
   var counterTargetNum:Int = 10;
 
-  function onStepHit(event:SongTimeScriptEvent)
+  override function onStepHit(event:SongTimeScriptEvent)
   {
     super.onStepHit(event);
 
@@ -253,7 +253,7 @@ class PhillyBlazinStage extends Stage
     }
   }
 
-  public override function onSongEnd(event:CountdownScriptEvent):Void
+  override function onSongEnd(event:CountdownScriptEvent):Void
   {
     super.onSongEnd(event);
     // Disable lightning during ending cutscene.

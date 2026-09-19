@@ -9,7 +9,7 @@ class TankmanCharacter extends MultiAnimateAtlasCharacter
     super('tankman');
   }
 
-  function onNoteHit(event:HitNoteScriptEvent)
+  override function onNoteHit(event:HitNoteScriptEvent)
   {
     // Override the hit note animation.
     switch (event.note.kind)

@@ -27,13 +27,11 @@ class NenePixelCharacter extends SparrowCharacter
         results.push(Paths.spritesheet("gameplay/characters/nene-pixel/abot-pixel/abot-pixel-speaker").image());
         results.push(Paths.image("gameplay/characters/nene-pixel/nene-pixel-mask"));
         results.push(Paths.image("gameplay/characters/nene-pixel/abot-pixel/abot-pixel-speaker-mask"));
-        break;
       case "XML":
         results.push(Paths.spritesheet("gameplay/characters/nene-pixel/abot-pixel/abot-pixel-head").xml());
         results.push(Paths.spritesheet("gameplay/characters/nene-pixel/abot-pixel/abot-pixel-body").xml());
         results.push(Paths.spritesheet("gameplay/characters/nene-pixel/abot-pixel/abot-pixel-back").xml());
         results.push(Paths.spritesheet("gameplay/characters/nene-pixel/abot-pixel/abot-pixel-speaker").xml());
-        break;
     }
 
     return results;
@@ -48,7 +46,7 @@ class NenePixelCharacter extends SparrowCharacter
   var abotHead:FunkinSprite;
   var abotBack:FunkinSprite;
 
-  function onCreate(event:ScriptEvent)
+  override function onCreate(event:ScriptEvent)
   {
     super.onCreate(event);
 
@@ -215,7 +213,7 @@ class NenePixelCharacter extends SparrowCharacter
     abotSpeaker.shader = abotSpeakerShader;
   }
 
-  function dance(forceRestart:Bool)
+  override function dance(forceRestart:Bool)
   {
     if (abotSpeaker?.animation != null) abotSpeaker.animation.play("danceLeft", true);
     // Then, perform the appropriate animation for the current state.
@@ -256,7 +254,7 @@ class NenePixelCharacter extends SparrowCharacter
   /**
    * Called when the chart hits a song event.
    */
-  public override function onSongEvent(scriptEvent:SongEventScriptEvent)
+  override function onSongEvent(scriptEvent:SongEventScriptEvent)
   {
     super.onSongEvent(scriptEvent);
     if (scriptEvent.eventData.eventKind == "FocusCamera")
@@ -289,7 +287,7 @@ class NenePixelCharacter extends SparrowCharacter
     abotHead.animation.play('toright');
   }
 
-  function onUpdate(event:UpdateScriptEvent)
+  override function onUpdate(event:UpdateScriptEvent)
   {
     super.onUpdate(event);
 
@@ -305,7 +303,7 @@ class NenePixelCharacter extends SparrowCharacter
     }
   }
 
-  override public function onAdd(event:ScriptEvent):Void
+  override function onAdd(event:ScriptEvent):Void
   {
     super.onAdd(event);
 
@@ -364,7 +362,7 @@ class NenePixelCharacter extends SparrowCharacter
 
   var animationFinished:Bool = false;
 
-  function onAnimationFinished(name:String)
+  override function onAnimationFinished(name:String)
   {
     super.onAnimationFinished(name);
 
@@ -378,7 +376,7 @@ class NenePixelCharacter extends SparrowCharacter
     }
   }
 
-  function onAnimationFrame(name:String, frameNumber:Int, frameIndex:Int)
+  override function onAnimationFrame(name:String, frameNumber:Int, frameIndex:Int)
   {
     super.onAnimationFrame(name, frameNumber, frameIndex);
 

@@ -10,7 +10,7 @@ class SchoolErectStage extends Stage
     super('schoolErect');
   }
 
-  function buildStage()
+  override function buildStage()
   {
     super.buildStage();
 
@@ -113,7 +113,7 @@ class SchoolErectStage extends Stage
     }
   }
 
-  function onSongEnd(event:ScriptEvent):Void
+  override function onSongEnd(event:ScriptEvent):Void
   {
     super.onSongEnd(event);
     if (event.eventcanceled)

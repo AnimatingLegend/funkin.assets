@@ -10,7 +10,7 @@ class SpiritCharacter extends PackerCharacter
     super('spirit');
   }
 
-  function onCreate(event:ScriptEvent)
+  override function onCreate(event:ScriptEvent)
   {
     super.onCreate(event);
 

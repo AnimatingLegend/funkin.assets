@@ -33,7 +33,7 @@ class MallXmasErectStage extends Stage
     return results;
   }
 
-  function onCreate(event:ScriptEvent):Void
+  override function onCreate(event:ScriptEvent):Void
   {
     super.onCreate(event);
 

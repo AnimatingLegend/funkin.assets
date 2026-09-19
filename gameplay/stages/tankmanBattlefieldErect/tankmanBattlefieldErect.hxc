@@ -13,14 +13,14 @@ class TankmanBattlefieldErectStage extends Stage
     super('tankmanBattlefieldErect');
   }
 
-  function onCreate(event:ScriptEvent):Void
+  override function onCreate(event:ScriptEvent):Void
   {
     super.onCreate(event);
   }
 
   var tankmanRim:DropShadowShader;
 
-  public function onGameOver(event:ScriptEvent)
+  override function onGameOver(event:ScriptEvent)
   {
     super.onGameOver(event);
     getBoyfriend().shader = null;
@@ -88,7 +88,7 @@ class TankmanBattlefieldErectStage extends Stage
   /**
    * Called when the chart hits a song event.
    */
-  public override function onSongEvent(scriptEvent:SongEventScriptEvent)
+  override function onSongEvent(scriptEvent:SongEventScriptEvent)
   {
     super.onSongEvent(scriptEvent);
 
@@ -98,12 +98,7 @@ class TankmanBattlefieldErectStage extends Stage
     }
   }
 
-  function onUpdate(event:UpdateScriptEvent):Void
-  {
-    super.onUpdate(event);
-  }
-
-  function onBeatHit(event:SongTimeScriptEvent):Void
+  override function onBeatHit(event:SongTimeScriptEvent):Void
   {
     super.onBeatHit(event);
 
@@ -113,7 +108,7 @@ class TankmanBattlefieldErectStage extends Stage
     }
   }
 
-  function onSongRetry(event:ScriptEvent)
+  override function onSongRetry(event:ScriptEvent)
   {
     super.onSongRetry(event);
 

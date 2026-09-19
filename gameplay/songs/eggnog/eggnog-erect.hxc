@@ -34,18 +34,18 @@ class EggnogErectSong extends Song
     });
   }
 
-  public override function onCountdownStart(event:CountdownScriptEvent):Void
+  override function onCountdownStart(event:CountdownScriptEvent):Void
   {
     super.onCountdownStart(event);
     trace(PlayState.instance.currentVariation);
   }
 
-  function onSongRetry(event:ScriptEvent)
+  override function onSongRetry(event:ScriptEvent)
   {
     super.onSongRetry(event);
   }
 
-  public override function onSongEnd(event:CountdownScriptEvent):Void
+  override function onSongEnd(event:CountdownScriptEvent):Void
   {
     super.onSongEnd(event);
 
@@ -181,7 +181,7 @@ class EggnogErectSong extends Song
     });
   }
 
-  function onUpdate(event:UpdateScriptEvent)
+  override function onUpdate(event:UpdateScriptEvent)
   {
     super.onUpdate(event);
 
@@ -231,7 +231,7 @@ class EggnogErectSong extends Song
   /**
    * Replay the cutscene after leaving the song.
    */
-  function onCreate(event:ScriptEvent):Void
+  override function onCreate(event:ScriptEvent):Void
   {
     super.onCreate(event);
     cutsceneSkipped = false;

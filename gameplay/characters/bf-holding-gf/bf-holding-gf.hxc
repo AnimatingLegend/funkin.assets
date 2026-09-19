@@ -10,7 +10,7 @@ class BFHoldingGFCharacter extends MultiSparrowCharacter
     super('bf-holding-gf');
   }
 
-  function onAnimationFrame(name:String, frameNumber:Int, frameIndex:Int)
+  override function onAnimationFrame(name:String, frameNumber:Int, frameIndex:Int)
   {
     super.onAnimationFrame(name, frameNumber, frameIndex);
 

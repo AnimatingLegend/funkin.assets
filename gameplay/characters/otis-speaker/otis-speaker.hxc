@@ -199,7 +199,7 @@ class OtisSpeakerCharacter extends AnimateAtlasCharacter
 
   var refershedLol:Bool = false;
 
-  function reset():Void
+  override function reset():Void
   {
     initTimemap();
   }
@@ -244,7 +244,7 @@ class OtisSpeakerCharacter extends AnimateAtlasCharacter
     }
   }
 
-  override public function onAdd(event:ScriptEvent):Void
+  override function onAdd(event:ScriptEvent):Void
   {
     super.onAdd(event);
 
@@ -351,7 +351,7 @@ class OtisSpeakerCharacter extends AnimateAtlasCharacter
   /**
    * Called when the chart hits a song event.
    */
-  public override function onSongEvent(scriptEvent:SongEventScriptEvent)
+  override function onSongEvent(scriptEvent:SongEventScriptEvent)
   {
     super.onSongEvent(scriptEvent);
     if (scriptEvent.eventData.eventKind == "FocusCamera")
