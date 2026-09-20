@@ -329,7 +329,6 @@ class PhillyTrainErectStage extends Stage
         PlayState.instance.startCountdown();
       }
 
-      hasPlayedCutscene = true;
       cutsceneMusic.stop();
     });
   }
@@ -338,7 +337,6 @@ class PhillyTrainErectStage extends Stage
   {
     cutsceneSkipped = true;
     explode = false;
-    hasPlayedCutscene = true;
     PlayState.instance.camCutscene.fade(0xFF000000, 0.5, false, null, true);
     cutsceneMusic.fadeOut(0.5, 0);
 
