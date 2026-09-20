@@ -55,8 +55,6 @@ class TankmanBattlefieldErectStage extends Stage
           rim.useAltMask = true;
         }
 
-        getNamedProp('tankBricks').setPosition(445, 774);
-
       case CharacterType.DAD:
         rim.angle = 25;
         rim.threshold = 0.3;
@@ -123,7 +121,5 @@ class TankmanBattlefieldErectStage extends Stage
     {
       tankmanRim.useAltMask = false;
     }
-
-    getNamedProp('tankBricks').setPosition(445, 774);
   }
 }
